@@ -98,6 +98,18 @@ char* getReversedCString(char* currentWordPosition) {
 	}
 
 	// Use a boolean variabe, to only accept returned boolean statements
+	if (currentWordPosition_Length <= 3) {
+		cout << "---------------------------" << endl;
+		cout << "The word " << currentWordPosition << " is not a Palindromes" << endl;
+		cout << "---------------------------" << endl;
+		return 0;
+	}
+
+	if (currentWordPosition_Length > 20) {
+		cout << "Exiting....." << endl;
+		exit;
+	}
+
 	bool PalindromesBool = Palindromes(currentWordPosition, reversedString, currentWordPosition_Length);
 	if (PalindromesBool == true) {
 		cout << "The word " << currentWordPosition << " is a Palindromes" << endl;
